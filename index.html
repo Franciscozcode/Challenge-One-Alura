@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Codigo Secreto</h1>
+    <main>
+        <section class="caja1">
+            <form action="">
+                <label for="text">Solo letras minúsculas, sin acento</label>
+                <input class="inputIngresar" type="text"  
+                placeholder="Ingrese el texto aqui" 
+                id="ingresarDatos"pattern="[a-z]{1,15}" title="Oonly lower case" required >
+                <input class="encriptar" type="button" value="encriptar!" id="btnEncriptar">
+                <input class= "btnDesencriptar" type="button" value="desencriptar!" id="btnDesencriptar">
+            </form>  
+        </section>
+
+        <section class="caja2">
+            <h2>Mensaje encriptado</h2>
+            <input  class="resultado" type="text" id="resultado" value="">
+            
+
+        </section>
+
+    </main>
+    <script src="pruebas.js"></script>
+</body>
+</html>
