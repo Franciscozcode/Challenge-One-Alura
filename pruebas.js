@@ -1,20 +1,23 @@
 let btnEncriptar = document.querySelector(".encriptar");
 
-let invalidChar = /[A-Z0-9]/g;
-
- let verificador = document.querySelector(".inputIngresar").value;
- 
-let prueba = verificador.match(invalidChar);
- if (verificador == prueba)  {
-  alert("Caracter Invalido")
-} 
-
+let invalidChar = /[^\w\s]/g;
 
 btnEncriptar.addEventListener("click", function () {
-    let textoIngresado = document.querySelector(".inputIngresar").value;
-    let encriptacion = textoIngresado.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
-    document.getElementById("resultado").value = encriptacion;
-  })
+  let textoIngresado = document.querySelector(".inputIngresar").value;
+
+  let prueba = textoIngresado.match(invalidChar);
+  if (prueba !== null) {
+    alert("Caracter inválido");
+  }
+
+  let encriptacion = textoIngresado
+    .replace(/e/gi, "enter")
+    .replace(/i/gi, "imes")
+    .replace(/a/gi, "ai")
+    .replace(/o/gi, "ober")
+    .replace(/u/gi, "ufat");
+  document.getElementById("resultado").value = encriptacion;
+});
  
 let btnDesencriptar = document.getElementById("btnDesencriptar")
 
